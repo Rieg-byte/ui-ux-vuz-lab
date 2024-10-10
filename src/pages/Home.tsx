@@ -6,7 +6,7 @@ import { EmoteCard } from '../components/EmoteCard';
 const Home = () => {
     return (
         <div>
-            <h1>Добро пожаловать!</h1>
+            <h1>Часто используемые эмоции</h1>
             <div style={{
                 display: 'flex',
                 gap: '16px',
