@@ -1,17 +1,33 @@
 import React from 'react';
 import Button from '../components/Button';
+import { EmoteCard } from '../components/EmoteCard';
 
-function Home() {
- return (
-    <div>
-        <h1>Добро пожаловать!</h1>
-        <Button
-            label="Нажми меня"
-            onClick={() => alert('Кнопка нажата!')}
-            color="blue"
-            size="large"
-        />
-    </div>
- );
+
+const Home = () => {
+    return (
+        <div>
+            <h1>Добро пожаловать!</h1>
+            <div style={{
+                display: 'flex',
+                gap: '16px',
+                justifyContent: 'flex-start',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                padding: '16px',
+            }}>
+                <EmoteCard
+                    label="PogT"
+                    count={3249}
+                    imageUrl="/path/to/image.jpg"
+                />
+                <EmoteCard
+                    label="LUL"
+                    count={1322}
+                    imageUrl="/path/to/image2.jpg" 
+                />
+            </div>
+        </div>
+    );
 }
+
 export default Home;

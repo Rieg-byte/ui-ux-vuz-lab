@@ -1,18 +1,20 @@
-import Button from "./components/Button";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import { Header } from './components/header';
+import Layout from './components/Layout';
 
-const Home = () => {
+function App() {
   return (
-    <div>
-      Домашняя страница
-      <Button
-        label="Нажми меня"
-        onClick={() => alert('Кнопка нажата!')}
-        color="blue"
-        size="large"
-        />
-    </div>
-    
-  )
+    <BrowserRouter>
+      <Layout>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
 }
-
-export default Home
+export default App;
